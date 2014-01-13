@@ -1,3 +1,4 @@
+$:.unshift "#{File.dirname(__FILE__)}/lib"
 require 'open_flash_chart'
 
 ActionView::Base.send :include, OpenFlashChart::View
