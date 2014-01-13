@@ -1,6 +1,6 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'open_flash_chart'
+require 'open_flash_chart/version'
 
 Gem::Specification.new do |spec|
   spec.name = "open_flash_chart"
