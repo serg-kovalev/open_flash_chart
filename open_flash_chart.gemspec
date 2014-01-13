@@ -1,9 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'open_flash_chart'
 
 Gem::Specification.new do |spec|
   spec.name = "open_flash_chart"
-  spec.version = "2.0.0"
+  spec.version = OpenFlashChart::VERSION
   spec.authors = [ 'Siarhei Kavaliou, Charlie pullmonkey' ]
   spec.email = 'siarhei_kavaliou@epam.com'
   spec.summary = 'OpenFlashChart - Powerful open source charts'

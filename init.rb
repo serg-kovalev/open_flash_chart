@@ -1,4 +1,5 @@
-$:.unshift "#{File.dirname(__FILE__)}/lib"
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'open_flash_chart'
 
 ActionView::Base.send :include, OpenFlashChart::View
