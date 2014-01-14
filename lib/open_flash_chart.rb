@@ -1,3 +1,22 @@
+module OpenFlashChart
+end
+
+begin
+  require 'rails'
+rescue LoadError
+  #do nothing
+end
+
+$stderr.puts <<-EOC if !defined?(Rails)
+warning: no framework detected.
+
+Your Gemfile might not be configured properly.
+---- e.g. ----
+Rails:
+gem 'open_flash_chart'
+
+EOC
+
 require 'open_flash_chart/base'
 require 'open_flash_chart/bar_base'
 require 'open_flash_chart/bar'
@@ -45,4 +64,4 @@ require 'open_flash_chart/linear_regression'
 require 'open_flash_chart/ofc_ajax'
 require 'open_flash_chart/open_flash_chart_object'
 
-require 'open_flash_chart/railtie' if defined?(::Rails::Railtie)
+require 'open_flash_chart/railtie' if defined? Rails
