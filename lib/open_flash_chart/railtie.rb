@@ -3,7 +3,7 @@ require 'open_flash_chart'
 module OpenFlashChart
   class Railtie < ::Rails::Railtie
     initializer 'open_flash_chart' do |_app|
-      if definded?(ActionView::Base)     
+      if defined?(ActionView::Base)     
         ActionView::Base.send :include, OpenFlashChart::View
         OpenFlashChart::Base.send :include, OpenFlashChart::View
       end
